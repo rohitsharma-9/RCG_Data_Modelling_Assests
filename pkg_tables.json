@@ -1,0 +1,2986 @@
+[
+  {
+    "name": "ITRVL_ACT_INV_PKG_VW",
+    "module": "REPORT",
+    "description": "Table which stores applicability criteria package codes",
+    "columns": [
+      {
+        "name": "PACKAGE_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key . ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Tenant Id. Compliance with Conglomerate Config ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Company Id. Compliance with Conglomerate Config ."
+      },
+      {
+        "name": "INVENTORY_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Foreign Key to ITRVL_ACT_INVENTORY table. ."
+      },
+      {
+        "name": "PKG_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Holds PACKAGE Code ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified User Details ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      }
+    ],
+    "source_file": "itrvl_act.HTML"
+  },
+  {
+    "name": "ITRVL_AGN_COM_PKG_CLSSFCN_VW",
+    "module": "REPORT",
+    "description": "This table stores one to many pckg classification code under a product criteria",
+    "columns": [
+      {
+        "name": "PKG_CLSSFCN_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key for itrvl_agn_com_pkg_clssfcn ."
+      },
+      {
+        "name": "PROF_PROD_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Standard Commission Product Criteria Def. ."
+      },
+      {
+        "name": "COMM_REST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Commission Restriction Def ."
+      },
+      {
+        "name": "CLSSFCN_CODE",
+        "data_type": "CHARACTER VARYING(8)",
+        "nullable": "YES",
+        "comment": "Unique classification code . ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Package classification Status ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "The user who modified the Package classification detail ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The last modified date on which the Package classification                                                                                                            \n is modified ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company ID ."
+      }
+    ],
+    "source_file": "itrvl_agn.HTML"
+  },
+  {
+    "name": "ITRVL_AGN_COM_PKG_SERCODE_VW",
+    "module": "REPORT",
+    "description": "This table stores one to many pckg series code under a product criteria",
+    "columns": [
+      {
+        "name": "PKG_SERIES_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key for itrvl_agn_com_pkg_sercode ."
+      },
+      {
+        "name": "PROF_PROD_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Standard Commission Product Criteria Def. ."
+      },
+      {
+        "name": "COMM_REST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Commission Restriction Def ."
+      },
+      {
+        "name": "PKG_SER_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Unique package series code . ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Package series Status ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "The user who modified the Package series detail ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The last modified date on which the Package series                                                                                                                    \n is modified ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company ID ."
+      }
+    ],
+    "source_file": "itrvl_agn.HTML"
+  },
+  {
+    "name": "ITRVL_AGN_COM_PKG_TYPE_VW",
+    "module": "REPORT",
+    "description": "This table stores one to many pckg type code under a product criteria",
+    "columns": [
+      {
+        "name": "PKG_TYPE_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key for itrvl_agn_com_pkg_type ."
+      },
+      {
+        "name": "PROF_PROD_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Standard Commission Product Criteria Def. ."
+      },
+      {
+        "name": "COMM_REST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK- PK of Commission Restriction Def ."
+      },
+      {
+        "name": "PKG_TYPE",
+        "data_type": "CHARACTER VARYING(8)",
+        "nullable": "YES",
+        "comment": "Unique package type code . ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Package Type Status ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "The user who modified the Package Type detail ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The last modified date on which the Package Type                                                                                                                      \n is modified ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company ID ."
+      }
+    ],
+    "source_file": "itrvl_agn.HTML"
+  },
+  {
+    "name": "ITRVL_AGN_COM_PRD_PKGTHEME_VW",
+    "module": "REPORT",
+    "description": "Table which stores the Pakage Theme Code",
+    "columns": [
+      {
+        "name": "PKG_THEME_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Pakage Theme Id ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company Id of the user ."
+      },
+      {
+        "name": "PROF_PROD_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Product Id ."
+      },
+      {
+        "name": "COMM_REST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Restriction Id ."
+      },
+      {
+        "name": "PKG_THEME_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Pakage Theme Code ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "UserId of the User who has last modified ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      }
+    ],
+    "source_file": "itrvl_agn.HTML"
+  },
+  {
+    "name": "ITRVL_AGN_COM_PRD_PKG_CODE_VW",
+    "module": "REPORT",
+    "description": "To store product package codes",
+    "columns": [
+      {
+        "name": "PKG_CODE_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Package Code Id ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company Id of the user ."
+      },
+      {
+        "name": "PRD_SLAB_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Product Slab Id ."
+      },
+      {
+        "name": "COMM_REST_MAXCOMCAP_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Max Com Id ."
+      },
+      {
+        "name": "PKG_CODE",
+        "data_type": "CHARACTER VARYING(10)",
+        "nullable": "YES",
+        "comment": "Package Code ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "UserId of the User who has last modified ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      }
+    ],
+    "source_file": "itrvl_agn.HTML"
+  },
+  {
+    "name": "ITRVL_AIR_CAT_PKG_AVAIL_VW",
+    "module": "REPORT",
+    "description": "Air catalogue package availability table",
+    "columns": [
+      {
+        "name": "PKG_AVAIL_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "PRIMARY KEY SEQUENCE ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company ID ."
+      },
+      {
+        "name": "AIR_CATALOGUE_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "FK TO THE CATALOGUE DEF TABLE ."
+      },
+      {
+        "name": "PKG_CAT",
+        "data_type": "CHARACTER VARYING(16)",
+        "nullable": "YES",
+        "comment": "DESTINATION CODE FROM PACKAGE DEF ."
+      },
+      {
+        "name": "PKG_TYPE",
+        "data_type": "CHARACTER VARYING(8)",
+        "nullable": "YES",
+        "comment": "PACKAGE TYPE FROM PACKAGE DEF ."
+      },
+      {
+        "name": "PKG_COD",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "PACKAGE CODE FROM PACKAGE DEF ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Status of the record (Active/Inactive/Deleted) ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified User Details ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      }
+    ],
+    "source_file": "itrvl_air.HTML"
+  },
+  {
+    "name": "ITRVL_AIR_INVPKG_VW",
+    "module": "REPORT",
+    "description": "Air inventory package table",
+    "columns": [
+      {
+        "name": "PKG_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PK SEQUENCE ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "CUSTOMER ID ."
+      },
+      {
+        "name": "PKG_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "PACKAGE CODE FROM PACKAGE MODULE ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "APPLICABILITY_SWITCH",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "0 = include, 1= exclude, 2 = applicable to all ."
+      }
+    ],
+    "source_file": "itrvl_air.HTML"
+  },
+  {
+    "name": "ITRVL_AIR_INV_PKG_CATEGORY_VW",
+    "module": "REPORT",
+    "description": "Block Package category table, i.e, table containing package categories associated with particular block inventory",
+    "columns": [
+      {
+        "name": "PKG_CATEGORY_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Primary Key joining with Criteria table ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company ID ."
+      },
+      {
+        "name": "PKG_CATEGORY_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Package Category Code ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "APPLICABILITY_SWITCH",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "0 = include, 1= exclude, 2 = applicable to all ."
+      }
+    ],
+    "source_file": "itrvl_air.HTML"
+  },
+  {
+    "name": "ITRVL_AIR_INV_PKG_SERIES_VW",
+    "module": "REPORT",
+    "description": "Block Package series table, i.e, table containing package series associated with particular block inventory",
+    "columns": [
+      {
+        "name": "PKG_SERIES_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Primary Key joining with Criteria table ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company ID ."
+      },
+      {
+        "name": "PKG_SERIES_CODE",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Package Series Code ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "APPLICABILITY_SWITCH",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "0 = include, 1= exclude, 2 = applicable to all ."
+      }
+    ],
+    "source_file": "itrvl_air.HTML"
+  },
+  {
+    "name": "ITRVL_AIR_SUP_CP_PKG_INFO_VW",
+    "module": "REPORT",
+    "description": "Air cost and price package information table",
+    "columns": [
+      {
+        "name": "PKG_SERIES_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key sequence ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company Id ."
+      },
+      {
+        "name": "COST_PRICE_DEF_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "fk to table ITRVL_SUP_AIR_CP_BASE_DEF ."
+      },
+      {
+        "name": "PKG_SERIES",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "package series code from package def table ."
+      },
+      {
+        "name": "PACKAGE_CODE",
+        "data_type": "CHARACTER VARYING(30)",
+        "nullable": "YES",
+        "comment": "package under the selected package series from the package def table ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Status of the offer record (Active/Inactive/Deleted) ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified User Details ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      }
+    ],
+    "source_file": "itrvl_air.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_AMD_POLICY_VW",
+    "module": "REPORT",
+    "description": "Table to store package amendment policy details",
+    "columns": [
+      {
+        "name": "AMEND_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Amendment ID ."
+      },
+      {
+        "name": "AMOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "The amount for amendment ."
+      },
+      {
+        "name": "AMEND_TYPE",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Type of the amendment ."
+      },
+      {
+        "name": "AMEND_POLICY_DESC",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Description of the amendment Policy ."
+      },
+      {
+        "name": "CURRENCY",
+        "data_type": "CHARACTER VARYING(5)",
+        "nullable": "YES",
+        "comment": "Currency Code ."
+      },
+      {
+        "name": "FROM_DATE_TIME",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Date from when the policy is applicable ."
+      },
+      {
+        "name": "TO_DATE_TIME",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The date till when the policy is applicable ."
+      },
+      {
+        "name": "PAX_TYPE",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Passenger Types for which this is applicable ."
+      },
+      {
+        "name": "APPL_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Is the application type is per pax/ per room or once ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "The Super PNR number to which this is associated ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "The Component in the super pnr to which the policy is related ."
+      },
+      {
+        "name": "RULEID",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "This column is to store the corresponding rule ID ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "the company id ."
+      },
+      {
+        "name": "TIME_ZONE",
+        "data_type": "CHARACTER VARYING(40)",
+        "nullable": "YES",
+        "comment": "Holds the timezone of the amendment policy ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_BENEFIT_APPL_VW",
+    "module": "REPORT",
+    "description": "This table is to save the promotion benefit applicability details",
+    "columns": [
+      {
+        "name": "PKG_BENEFIT_APPL_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the promotion benefit applicability id ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores super pnr number ."
+      },
+      {
+        "name": "APPL_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the promotion benefit applicability type ."
+      },
+      {
+        "name": "PKG_PROMO_BENEFIT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the promotion benefit id ."
+      },
+      {
+        "name": "PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the pax id ."
+      },
+      {
+        "name": "UNIT_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the unit id ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company id ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Stores the last modified by ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the last modified date ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_CHRG_VW",
+    "module": "REPORT",
+    "description": "The charge split up for the package",
+    "columns": [
+      {
+        "name": "CHARGE_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Charge Id ; Primary Key ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign Key to Package Booking Table ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Customer Id or User Id ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Super PNR Number  : Stores the super pnr number which holds the package booking ."
+      },
+      {
+        "name": "CHARGE_LEVEL",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Indicates the charge level. Varies for each domain. eg: per night, per pax etc. ."
+      },
+      {
+        "name": "CHARGE_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the type of charge - FARE, ROOMCHARGE, TAX, SURCHARGE etc. ."
+      },
+      {
+        "name": "CURRENCY",
+        "data_type": "CHARACTER VARYING(6)",
+        "nullable": "YES",
+        "comment": "Stores the currency associated with the charge ."
+      },
+      {
+        "name": "BASE_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the base amount associated with the charge type ."
+      },
+      {
+        "name": "DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the discount associated with the charge type ."
+      },
+      {
+        "name": "GROSS_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the gross amount associated with the charge type ."
+      },
+      {
+        "name": "NET_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "\"Stores the net amount associated with the charge type\" ."
+      },
+      {
+        "name": "COMMISSIONABLE_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores whether the charge is commissionable or not ."
+      },
+      {
+        "name": "AGENCY_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the agency commission associated with the charge ."
+      },
+      {
+        "name": "VENDOR_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the vendor commission associated with the charge ."
+      },
+      {
+        "name": "MARK_UP",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the MarkUp associated with the charge ."
+      },
+      {
+        "name": "PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the Passenger ID associated with the charge ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      },
+      {
+        "name": "BASE_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores base cost associated with the charge type ."
+      },
+      {
+        "name": "MANUAL_ADD_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Is the charge manually added ."
+      },
+      {
+        "name": "REFUNDABLE_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Is the charge manually added ."
+      },
+      {
+        "name": "BASE_OVERRIDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "base_overriden_ind ."
+      },
+      {
+        "name": "GROSS_OVERRIDDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "gross_overridden_ind ."
+      },
+      {
+        "name": "COMM_OVERRIDDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "comm_overridden_ind ."
+      },
+      {
+        "name": "ORIGINAL_BASE_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original Base cost before override  ."
+      },
+      {
+        "name": "ORIGINAL_GROSS_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original gross price before override  ."
+      },
+      {
+        "name": "ORIGINAL_COMMISSION_AMT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "before override  ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores whetehe the charge is added manually or from pring module ."
+      },
+      {
+        "name": "ORIGINAL_SUP_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original cost obtained from the supplier before applying supplier promotions if any ."
+      },
+      {
+        "name": "SUPPLIER_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the discount applied via supplier promotions if any ."
+      },
+      {
+        "name": "PRICE_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "price_servicetax ."
+      },
+      {
+        "name": "COST_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "cost_servicetax ."
+      },
+      {
+        "name": "COMMISSION_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "commission_servicetax ."
+      },
+      {
+        "name": "VDR_CUR",
+        "data_type": "CHARACTER VARYING(6)",
+        "nullable": "YES",
+        "comment": "This holds the Vendor currency ."
+      },
+      {
+        "name": "COST_VDR_CUR",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the base cost in vendor currency ."
+      },
+      {
+        "name": "BASE_PRC_VDR_CUR",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the base price in vendor currency ."
+      },
+      {
+        "name": "EXCHG_RATE_TO_PRC_CUR",
+        "data_type": "REAL",
+        "nullable": "YES",
+        "comment": "This holds the exchange rate of vendor currency to pricing currency ."
+      },
+      {
+        "name": "VENDOR_COMM_PERCENTAGE",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the vendor commission percentage ."
+      },
+      {
+        "name": "VENDOR_COMM_OVERRIDDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates whether the vendor commission has been overridden ."
+      },
+      {
+        "name": "ORIGINAL_VENDOR_COMM_AMT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original vendor commission amount before any overriding has been performed ."
+      },
+      {
+        "name": "ORIGINAL_VENDOR_COMM_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original vendor commission percentage before any overriding has been performed ."
+      },
+      {
+        "name": "CATEGORY",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the Charge Category ."
+      },
+      {
+        "name": "VAT_CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "Stores the value added tax code applied ."
+      },
+      {
+        "name": "PRICE_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the customer service tax percentage ."
+      },
+      {
+        "name": "COST_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the supplier service tax percentage ."
+      },
+      {
+        "name": "COMMISSION_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the commission service tax percentage ."
+      },
+      {
+        "name": "TC_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Tour Conductor Commission calculated by Scheduler ."
+      },
+      {
+        "name": "SERVICETAX_LEVELCODE",
+        "data_type": "CHARACTER VARYING(10)",
+        "nullable": "YES",
+        "comment": "Stores the service tax level code ."
+      },
+      {
+        "name": "TC_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Tour Conductor Discount calculated by Scheduler ."
+      },
+      {
+        "name": "ADJUSTED_AMOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the ADJUSTED_AMOUNT in case of price/discount overrider ."
+      },
+      {
+        "name": "STD_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the standard agency commissionr ."
+      },
+      {
+        "name": "BONUS_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the bonus agency commissionr ."
+      },
+      {
+        "name": "STD_COMMISSION_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the standard agency commission percentage ."
+      },
+      {
+        "name": "BONUS_COMMISSION_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the bonus agency commission percentage ."
+      },
+      {
+        "name": "ORIGINAL_STD_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original standard agency commissionr ."
+      },
+      {
+        "name": "ORIGINAL_BONUS_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original bonus agency commissionr ."
+      },
+      {
+        "name": "ORIGINAL_STD_COMM_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original standard agency commission percentage ."
+      },
+      {
+        "name": "ORIGINAL_BONUS_COMM_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original bonus agency commission percentage ."
+      },
+      {
+        "name": "PRICE_TAX_CLSFCN",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the price tax classification code ."
+      },
+      {
+        "name": "COMM_TAX_CLSFCN",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the commission tax classification code ."
+      },
+      {
+        "name": "IS_TAX_INCL_COMM",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive commission ."
+      },
+      {
+        "name": "IS_TAX_INCL_PRICE",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive price indicator ."
+      },
+      {
+        "name": "IS_TAX_INCL_COST",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive cost indicator ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_DEST_VW",
+    "module": "REPORT",
+    "description": "The package destintion table",
+    "columns": [
+      {
+        "name": "DESTN_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Destination Id ; Primary Key ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign Key to Package Booking Table ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Super PNR Number  : Stores the super pnr number which holds the package booking ."
+      },
+      {
+        "name": "DEST_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "The destination code  ."
+      },
+      {
+        "name": "REGION",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "The region  ."
+      },
+      {
+        "name": "START_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The package start date on the destination ."
+      },
+      {
+        "name": "END_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The package end date on the destination ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "The company id ."
+      },
+      {
+        "name": "DEST_TIMEZONE",
+        "data_type": "CHARACTER VARYING(40)",
+        "nullable": "YES",
+        "comment": "Holds the timezone of destination ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_ITEM_CHRG_VW",
+    "module": "REPORT",
+    "description": "Details of Package Item Charges",
+    "columns": [
+      {
+        "name": "CHARGE_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Charge Id ; Primary Key ."
+      },
+      {
+        "name": "ITEM_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PK of the table ."
+      },
+      {
+        "name": "CHARGE_LEVEL",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Charge level ."
+      },
+      {
+        "name": "CHARGE_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Charge type ."
+      },
+      {
+        "name": "CURRENCY",
+        "data_type": "CHARACTER VARYING(6)",
+        "nullable": "YES",
+        "comment": "Currency ."
+      },
+      {
+        "name": "BASE_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Base price ."
+      },
+      {
+        "name": "DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Discount ."
+      },
+      {
+        "name": "GROSS_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Gross price ."
+      },
+      {
+        "name": "NET_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Net price ."
+      },
+      {
+        "name": "COMMISSIONABLE_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Commissionable indicator ."
+      },
+      {
+        "name": "AGENCY_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Agency commission ."
+      },
+      {
+        "name": "VENDOR_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Vendor commission ."
+      },
+      {
+        "name": "MARK_UP",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Mark up ."
+      },
+      {
+        "name": "PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Passenger reference ."
+      },
+      {
+        "name": "BASE_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Base Cost ."
+      },
+      {
+        "name": "MANUAL_ADD_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Manual addition indicator ."
+      },
+      {
+        "name": "REFUNDABLE_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Refundable indicator ."
+      },
+      {
+        "name": "BASE_OVERRIDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Base overriden indicator ."
+      },
+      {
+        "name": "GROSS_OVERRIDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Gross overriden indicator ."
+      },
+      {
+        "name": "COMM_OVERRIDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Commission overriden indicator ."
+      },
+      {
+        "name": "ORIGINAL_BASE_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original Base cost ."
+      },
+      {
+        "name": "ORIGINAL_GROSS_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original gross price ."
+      },
+      {
+        "name": "ORIGINAL_COMMISSION_AMT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original commission amount ."
+      },
+      {
+        "name": "ORIGINAL_SUP_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Original supplier cost ."
+      },
+      {
+        "name": "SUPPLIER_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Suuplier discount ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company id ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Tenant id ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Super PNR number ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Created on date ."
+      },
+      {
+        "name": "VDR_CUR",
+        "data_type": "CHARACTER VARYING(6)",
+        "nullable": "YES",
+        "comment": "This holds the Vendor currency ."
+      },
+      {
+        "name": "EXCHG_RATE_TO_PRC_CUR",
+        "data_type": "REAL",
+        "nullable": "YES",
+        "comment": "This holds the exchange rate of vendor currency to pricing currency ."
+      },
+      {
+        "name": "PRICE_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Price service tax ."
+      },
+      {
+        "name": "COST_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Cost service tax ."
+      },
+      {
+        "name": "COST_VDR_CUR",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the base cost in vendor currency ."
+      },
+      {
+        "name": "COMMISSION_SERVICETAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Commission service tax ."
+      },
+      {
+        "name": "BASE_PRC_VDR_CUR",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the base price in vendor currency ."
+      },
+      {
+        "name": "VENDOR_COMM_PERCENTAGE",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the vendor commission percentage ."
+      },
+      {
+        "name": "VENDOR_COMM_OVERRIDDEN_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates whether the vendor commission has been overridden ."
+      },
+      {
+        "name": "ORIGINAL_VENDOR_COMM_AMT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original vendor commission amount before any overriding has been performed ."
+      },
+      {
+        "name": "ORIGINAL_VENDOR_COMM_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original vendor commission percentage before any overriding has been performed ."
+      },
+      {
+        "name": "CATEGORY",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the Charge Category ."
+      },
+      {
+        "name": "VAT_CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "Stores the value added tax code applied ."
+      },
+      {
+        "name": "PRICE_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the customer service tax percentage ."
+      },
+      {
+        "name": "COST_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the supplier service tax percentage ."
+      },
+      {
+        "name": "COMMISSION_SERVICETAX_PCT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the commission service tax percentage ."
+      },
+      {
+        "name": "TC_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Tour Conductor Commission calculated by Scheduler ."
+      },
+      {
+        "name": "SERVICETAX_LEVELCODE",
+        "data_type": "CHARACTER VARYING(10)",
+        "nullable": "YES",
+        "comment": "Stores the service tax level code ."
+      },
+      {
+        "name": "TC_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Tour Conductor Discount calculated by Scheduler ."
+      },
+      {
+        "name": "ADJUSTED_AMOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the ADJUSTED_AMOUNT in case of price/discount override ."
+      },
+      {
+        "name": "STD_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the standard agency commission ."
+      },
+      {
+        "name": "BONUS_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the bonus agency commission ."
+      },
+      {
+        "name": "STD_COMMISSION_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the standard agency commission percentage ."
+      },
+      {
+        "name": "BONUS_COMMISSION_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the bonus agency commission percentage ."
+      },
+      {
+        "name": "ORIGINAL_STD_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original standard agency commission ."
+      },
+      {
+        "name": "ORIGINAL_BONUS_COMMISSION",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the original bonus agency commission ."
+      },
+      {
+        "name": "ORIGINAL_STD_COMM_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original standard agency commission percentage ."
+      },
+      {
+        "name": "ORIGINAL_BONUS_COMM_PERCENT",
+        "data_type": "DOUBLE PRECISION",
+        "nullable": "YES",
+        "comment": "Stores the original bonus agency commission percentage ."
+      },
+      {
+        "name": "PRICE_TAX_CLSFCN",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the price tax classification code ."
+      },
+      {
+        "name": "COMM_TAX_CLSFCN",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the commission tax classification code ."
+      },
+      {
+        "name": "IS_TAX_INCL_COMM",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive commission ."
+      },
+      {
+        "name": "IS_TAX_INCL_PRICE",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive price indicator ."
+      },
+      {
+        "name": "IS_TAX_INCL_COST",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores the tax inclusive cost indicator ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_ITEM_GEN_PAX_VW",
+    "module": "REPORT",
+    "description": "Pax Details for each Generic Itinerary Item",
+    "columns": [
+      {
+        "name": "COMP_PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "COMP_PAX_ID Primary Key ."
+      },
+      {
+        "name": "PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign Key to PNR Pax Table ."
+      },
+      {
+        "name": "ITEM_GEN_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign Key to Generic Itinerary Item Table ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the super pnr number which holds the package booking ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Company Id ."
+      },
+      {
+        "name": "ITEM_PAX_STATUS",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the current status of the guests in the package ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the date of booking ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_ITEM_GEN_VW",
+    "module": "REPORT",
+    "description": "Details for each Generic Itinerary Item",
+    "columns": [
+      {
+        "name": "ITEM_GEN_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "ITEM_GEN_ID Primary Key ."
+      },
+      {
+        "name": "ITEM_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PK of the table ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the super pnr number which holds the package booking ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Company Id ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_ITEM_ROUTE_VW",
+    "module": "REPORT",
+    "description": "Table to store package item route details(for Transfer and AIR)",
+    "columns": [
+      {
+        "name": "ROUTE_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Route ID;Primary key ."
+      },
+      {
+        "name": "ITEM_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PK of the table ."
+      },
+      {
+        "name": "ITEM_SEQUENCE",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Itinerary sequence number of transfer in this route ."
+      },
+      {
+        "name": "START_DAY",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Start day of the transfer item in this route ."
+      },
+      {
+        "name": "END_DAY",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "End day of the transfer item in this route ."
+      },
+      {
+        "name": "FROM_LOCATION_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "From Location Type ."
+      },
+      {
+        "name": "TO_LOCATION_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "To Location Type ."
+      },
+      {
+        "name": "FROM_LOCATION",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "From Location Code ."
+      },
+      {
+        "name": "TO_LOCTION",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "To Location Code ."
+      },
+      {
+        "name": "TRIP_TYPE",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Type of trip. Possible values are O/R (Oneway/Round trip) ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company id ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_ITEM_VW",
+    "module": "REPORT",
+    "description": "Details of Package Items",
+    "columns": [
+      {
+        "name": "ITEM_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PK of the table ."
+      },
+      {
+        "name": "PKG_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign key (PK of PKG_MAIN table) ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Foreign key (PK of BKG_COMPONENT table) ."
+      },
+      {
+        "name": "SEQUENCE_NO",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Sequence number of the item in the itinerary ."
+      },
+      {
+        "name": "ITEM_TYPE",
+        "data_type": "CHARACTER VARYING(3)",
+        "nullable": "YES",
+        "comment": "Item type of the item in the itinerary ."
+      },
+      {
+        "name": "ITEM_CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "Item code of the item in the itinenary ."
+      },
+      {
+        "name": "APPLICABILITY_TYPE",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Applicability type of the item (M/E/O) ."
+      },
+      {
+        "name": "SOURCE_TYPE",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Source type of the item (G - Generic/C - Catalogued in iTravel/I - Interface) ."
+      },
+      {
+        "name": "IS_LEAD_ITEM",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates if the item is lead or not ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company id ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Tenant id ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Super PNR number ."
+      },
+      {
+        "name": "START_DAY",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "StartDay in itinerary ."
+      },
+      {
+        "name": "END_DAY",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "EndDay in itinerary ."
+      },
+      {
+        "name": "CATEGORY_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Item Category or Rate plan code ."
+      },
+      {
+        "name": "LOCATION",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Location of Item ."
+      },
+      {
+        "name": "UNIQUE_REF_ID",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Holds the item reference id  ."
+      },
+      {
+        "name": "OCCURENCE_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Item occurrence code ."
+      },
+      {
+        "name": "SUBS_GRP_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Substitutable Group code to which this Item belongs ."
+      },
+      {
+        "name": "IS_REMOVED",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates whether the item is removed as part of amendment flow ."
+      },
+      {
+        "name": "IS_FLEXIBLE",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates if the item is flexible or not. The value will be true for flexible item and false for fixed item ."
+      },
+      {
+        "name": "RATE_PLAN",
+        "data_type": "CHARACTER VARYING(27)",
+        "nullable": "YES",
+        "comment": "Rate Plan code as selected by the user ."
+      },
+      {
+        "name": "ITEM_REF_ID",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "Unique identifier to identify each item/item offer uniquely across package shopping/booking/amendment flows ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_MAIN_VW",
+    "module": "REPORT",
+    "description": "Table to store the package booking master data",
+    "columns": [
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the component id which uniquely identifies the package component ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the tenant id of user who created the booking ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the super pnr number which holds the package booking ."
+      },
+      {
+        "name": "PACKAGE_CODE",
+        "data_type": "CHARACTER VARYING(25)",
+        "nullable": "YES",
+        "comment": "Stores the package code of the package ."
+      },
+      {
+        "name": "PACKAGE_NAME",
+        "data_type": "CHARACTER VARYING(150)",
+        "nullable": "YES",
+        "comment": "Stores the name of the package ."
+      },
+      {
+        "name": "PKG_DEP_DATE_TIME",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the departure date and time of the package ."
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "data_type": "CHARACTER VARYING(5)",
+        "nullable": "YES",
+        "comment": "Stores the currency of the package ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company id for the booking ."
+      },
+      {
+        "name": "RATE_PLAN",
+        "data_type": "CHARACTER VARYING(27)",
+        "nullable": "YES",
+        "comment": "Stores the rate plan code of the package ."
+      },
+      {
+        "name": "PACKAGE_CATEGORY",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the package category ."
+      },
+      {
+        "name": "HUB_CODE",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the hub code of the package . Not in scope"
+      },
+      {
+        "name": "DURATION",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Package Duration  ."
+      },
+      {
+        "name": "THEME_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Package Theme  ."
+      },
+      {
+        "name": "SERIES_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Package Series  . Not in scope"
+      },
+      {
+        "name": "LEAD_PKG_IND",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates whether a pkg is lead or variation  . Not in scope"
+      },
+      {
+        "name": "LEAD_ITEM_CODE",
+        "data_type": "CHARACTER VARYING(30)",
+        "nullable": "YES",
+        "comment": "Package Lead Item Code ."
+      },
+      {
+        "name": "LEAD_ITEM_CAT",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Package Lead Item Category ."
+      },
+      {
+        "name": "BRAND_CODE",
+        "data_type": "CHARACTER VARYING(30)",
+        "nullable": "YES",
+        "comment": "Package Brand Code ."
+      },
+      {
+        "name": "PRICE_METHODOLOGY",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Possible Values are \"P\" Price-roll up \"C\" Cost roll up \"D\" Direct pricing ."
+      },
+      {
+        "name": "PRICE_OPACITY",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Possible Values are \"T\" Transparent \"O\" Opaque ."
+      },
+      {
+        "name": "ITIN_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "itinerary code of the package . ITIN_CODE refers to the package itinerary code. Whereas, LEAD_ITEM_CODE refers to the product code of the lead item within package. For eg, if cruise is the lead item in package, this refers to the cruise code."
+      },
+      {
+        "name": "IS_APPORTION_APPLIED",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Stores as TRUE if Price apportion is done else as FALSE . Not in scope"
+      },
+      {
+        "name": "SLCT_AIRPORT_CODES",
+        "data_type": "CHARACTER VARYING(150)",
+        "nullable": "YES",
+        "comment": "Airport codes selected by pax to fly from ."
+      },
+      {
+        "name": "LEAD_ITEM_FARECLS",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "HOLDS FARE CLASS OF LEAD ITEM ."
+      },
+      {
+        "name": "LEAD_ITEM_RATEPLAN_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "HOLDS THE RATEPLAN TYPE OF LEAD ITEM ."
+      },
+      {
+        "name": "LEAD_ITEM_DURATION",
+        "data_type": "CHARACTER VARYING(30)",
+        "nullable": "YES",
+        "comment": "HOLDS DURATION OF LEAD ITEM ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_PAX_PROM_VW",
+    "module": "REPORT",
+    "description": "PACKAGE PER PAX CHARGE BOOKING PROMOTION DETAILS TABLE",
+    "columns": [
+      {
+        "name": "PROMO_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "PRIMARY KEY SEQUNCE ."
+      },
+      {
+        "name": "CHARGE_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Charge Id ; Primary Key ."
+      },
+      {
+        "name": "PKG_PROMO_CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "PROMOTION CODE ."
+      },
+      {
+        "name": "AMOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "TOTAL BENEFIT AMOUNT OF THE PROMOTION ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "CUSTOMER ID ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "FOR AUDITING ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_PAX_VW",
+    "module": "REPORT",
+    "description": "Table to store the passenger details in a package belong to a booking",
+    "columns": [
+      {
+        "name": "COMP_PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the package pax id which uniquely identifies each passenger in the package component ."
+      },
+      {
+        "name": "PAX_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the passenger id which uniquely identifies each guest in the package component ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the component id which uniquely identifies the package component ."
+      },
+      {
+        "name": "PKG_PAX_STATUS",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the current status of the guests in the package ."
+      },
+      {
+        "name": "LOYALTY_MEMB_ID",
+        "data_type": "CHARACTER VARYING(32)",
+        "nullable": "YES",
+        "comment": "Stores unique id of the member in the program ."
+      },
+      {
+        "name": "LOYALTY_PGM_ID",
+        "data_type": "CHARACTER VARYING(16)",
+        "nullable": "YES",
+        "comment": "Stores id to indicate the company owner of the loyalty program ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores the super pnr number which holds the hotel booking ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the company id for the booking ."
+      },
+      {
+        "name": "PAX_TOTAL_PRICE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Stores the passenger total price for this particular component in pricing currency ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_BKG_PKG_PROM_BENEFIT_VW",
+    "module": "REPORT",
+    "description": "This table is to save the promotion benefit details",
+    "columns": [
+      {
+        "name": "PKG_PROMO_BENEFIT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the promotion benefit id ."
+      },
+      {
+        "name": "SUPER_PNR_NO",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "Stores super pnr number ."
+      },
+      {
+        "name": "PROMO_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the promotion id ."
+      },
+      {
+        "name": "BENEFIT_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the benefit id ."
+      },
+      {
+        "name": "BENEFIT_LEVEL",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the benefit level ."
+      },
+      {
+        "name": "COMP_PROMO_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the component promotion id ."
+      },
+      {
+        "name": "COMPONENT_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores the component id ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Stores the company id ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Stores the last modified by ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the last modified date ."
+      },
+      {
+        "name": "BENEFIT_NAME",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the benefit name ."
+      },
+      {
+        "name": "BENEFIT_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "Discount amount for each benefit ."
+      },
+      {
+        "name": "CREATED_ON",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores the booking creation date ."
+      }
+    ],
+    "source_file": "itrvl_bkg.HTML"
+  },
+  {
+    "name": "ITRVL_CRU_INV_PKG_GRP_CAT_VW",
+    "module": "REPORT",
+    "description": "This table is used to store the Cruise Inventory Cabin.",
+    "columns": [
+      {
+        "name": "CAT_REQ_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key Sequence. ."
+      },
+      {
+        "name": "REQUEST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Request Id requested by Package/Group Request. ."
+      },
+      {
+        "name": "CATEGORY_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "This field is used to store Category Code for Package/Group Request.. ."
+      },
+      {
+        "name": "REAL_ENT",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Real Space Entitled for Package/Group Request.. ."
+      },
+      {
+        "name": "GUAR_ENT",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Guarantee Space Entitled for Package/Group Request.. ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified By. ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date. ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "This field is used to map the Company Id. ."
+      }
+    ],
+    "source_file": "itrvl_cru.HTML"
+  },
+  {
+    "name": "ITRVL_CRU_INV_PKG_GRP_REQ_VW",
+    "module": "REPORT",
+    "description": "This table is used to store the Cruise Inventory Package/Group Request",
+    "columns": [
+      {
+        "name": "REQUEST_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store pkg/grp request id and is referenced to ITRVL_CRU_INV_PKG_GRP_REQ table ."
+      },
+      {
+        "name": "CRUISE_ID",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "This field is used to store Cruise code requested by Package/Group Request. ."
+      },
+      {
+        "name": "BLOCK_ID",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "This field is used to store Block Id for Package/Group Request. ."
+      },
+      {
+        "name": "BLOCK_NAME",
+        "data_type": "CHARACTER VARYING(150)",
+        "nullable": "YES",
+        "comment": "This field is used to store Block Name for Package/Group Request. ."
+      },
+      {
+        "name": "BLOCK_TYPE",
+        "data_type": "CHARACTER VARYING(25)",
+        "nullable": "YES",
+        "comment": "This field is used to store Block Type for Package/Group Request. ."
+      },
+      {
+        "name": "REQUESTOR_TYPE",
+        "data_type": "CHARACTER VARYING(3)",
+        "nullable": "YES",
+        "comment": "This field is used to store Requestor Type for Package/Group Request. ."
+      },
+      {
+        "name": "GRP_PKG_ID",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "This field is used to store Group Package Id. ."
+      },
+      {
+        "name": "BLOCK_NATURE",
+        "data_type": "CHARACTER VARYING(25)",
+        "nullable": "YES",
+        "comment": "This field is used to store Block Nature for Package/Group Request. ."
+      },
+      {
+        "name": "REAL_ALLOC",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Real Space Allocation. for Package/Group Request ."
+      },
+      {
+        "name": "REAL_DEALLOC",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Real Space Deallocation for Package/Group Request. ."
+      },
+      {
+        "name": "GUAR_ALLOC",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Guarantee Space Allocation for Package/Group Request. ."
+      },
+      {
+        "name": "GUAR_DEALLOC",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Guarantee Space Deallocation for Package/Group Request. ."
+      },
+      {
+        "name": "IS_REAL_OVERSELL",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "This field is used to store Real Space Oversell. ."
+      },
+      {
+        "name": "IS_GUAR_OVERSELL",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "This field is used to store Guarantee Space Oversell. ."
+      },
+      {
+        "name": "BLOCK_STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "This field is used to store Block Status for Package/Group Request. ."
+      },
+      {
+        "name": "PRIORITY",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "This field is used to store Priority. ."
+      },
+      {
+        "name": "IS_INV_INFO",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "This field is used to store whether Inventory Information exist. ."
+      },
+      {
+        "name": "IS_CABIN_INFO",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "This field is used to store whether Cabin Information exist. ."
+      },
+      {
+        "name": "CREATION_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "creation_date ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified By. ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date. ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "This field is used to map the Company Id. ."
+      },
+      {
+        "name": "CABIN_CODE",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This field is used to store Cabin Code for Package/Group Request. ."
+      },
+      {
+        "name": "OPERATION_MODE",
+        "data_type": "CHARACTER VARYING(15)",
+        "nullable": "YES",
+        "comment": "This field is used to store Operation Mode.Possible values are ADD,UPDATE,CUTBACK AND RELEASE ."
+      },
+      {
+        "name": "GRP_CLS_CODE",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This column is used to save Group Classification code. ."
+      },
+      {
+        "name": "GRP_CAT_CODE",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This column is used to save Group Category code. ."
+      },
+      {
+        "name": "PACKAGE_DEPARTURE_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "The column is used to store the Package departure Date for a Package Static block ."
+      },
+      {
+        "name": "PACKAGE_CATEGORY",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "The column is used to store the Package Category for a Package Static block ."
+      },
+      {
+        "name": "PACKAGE_GROUP_CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "The column is used to store the Group Code for a Package Static block ."
+      }
+    ],
+    "source_file": "itrvl_cru.HTML"
+  },
+  {
+    "name": "ITRVL_CRU_OPS_PKG_GRP_VW",
+    "module": "REPORT",
+    "description": "Table to store impacted package/group details corresponding to action details id in ITRVL_CRU_OPS_ACTION_DTLS table",
+    "columns": [
+      {
+        "name": "CRU_OPS_PKG_GRP_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Field to store the ID to identify the package/group code ."
+      },
+      {
+        "name": "CRU_OPS_ACTION_DTLS_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Reference to ITRVL_CRU_OPS_ACTION_DTLS ."
+      },
+      {
+        "name": "CODE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "Field to store Impacted pacakge or group Code ."
+      },
+      {
+        "name": "PACKAGE_TYPE",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "Field to store If package (fixed or flexible) ."
+      },
+      {
+        "name": "DEPARTURE_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Field to store Impacted cruise Departure Date ."
+      },
+      {
+        "name": "UPDATE_STATUS",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "Field to store Success or failed status (Sucess-S,Failed-F) ."
+      },
+      {
+        "name": "IS_PACKAGE",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Field to indicate if there is a package ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Field to store Company information ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Field to store modified user information ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Field to store modified date information ."
+      }
+    ],
+    "source_file": "itrvl_cru.HTML"
+  },
+  {
+    "name": "ITRVL_CRU_PRI_RTPLN_PKGS_VW",
+    "module": "REPORT",
+    "description": "This is a table for package basic details defined in Cruise Rateplan.",
+    "columns": [
+      {
+        "name": "PACKAGEID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "This column is used to save the FOREIGN KEY REFERENCES itrvl_cru.itrvl_cru_pri_rtpln_pkgs (packageid) ."
+      },
+      {
+        "name": "RATEPLANID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Stores foreign key reference to ITRVL_CRU_PRI_RATEPLNDEF table ."
+      },
+      {
+        "name": "PACKAGE_CODE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the package name in cruise rate plan definition ."
+      },
+      {
+        "name": "VALIDITY_START_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores Validity Start Date of package in cruise rate plan definition ."
+      },
+      {
+        "name": "VALIDITY_END_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores Validity End Date in cruise rate plan definition ."
+      },
+      {
+        "name": "CATEGORY_CODE",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This field stores the catagory code of the package. ."
+      },
+      {
+        "name": "ITEM_CODE",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This field stores the item code of the package ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Stores Last Modified Customer ID in cruise rate plan definition ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Stores Last Modified Date in cruise rate plan definition ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "This column is used to map the Company Id. ."
+      }
+    ],
+    "source_file": "itrvl_cru.HTML"
+  },
+  {
+    "name": "ITRVL_ACC_PKG_ACCLINE_DTLS_VW",
+    "module": "REPORT",
+    "description": "Table to store package line details for revenue recognition",
+    "columns": [
+      {
+        "name": "PKG_ID",
+        "data_type": "BIGINT",
+        "nullable": "YES",
+        "comment": "Unique identifier for each records ."
+      },
+      {
+        "name": "TENANT_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "This holds the tenant id ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "This holds the company id ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "This holds the last modified by details ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "This holds the last modified date ."
+      },
+      {
+        "name": "ORG_UNIT",
+        "data_type": "CHARACTER VARYING(75)",
+        "nullable": "YES",
+        "comment": "Holds the organization unit ."
+      },
+      {
+        "name": "BILLING_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "This is the Booking ID/Billing ID from Billing Table ."
+      },
+      {
+        "name": "CHARGE_TYPE",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Give the charge type details ."
+      },
+      {
+        "name": "SERVICE_TYPE",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "SERVICE_TYPE contains the same as Line type of Booking Line (Component) eg AIR, HTL, CRU, ACT, MIS etc. ."
+      },
+      {
+        "name": "IS_PARTOF_PKG",
+        "data_type": "BOOLEAN",
+        "nullable": "YES",
+        "comment": "Indicates the item is part of Package or Not part of Package ."
+      },
+      {
+        "name": "PKG_CMPNT_ID",
+        "data_type": "CHARACTER VARYING(20)",
+        "nullable": "YES",
+        "comment": "Stores the value of package component id ."
+      },
+      {
+        "name": "SALE_NET_VALUE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the net value ."
+      },
+      {
+        "name": "SALE_GROSS_VALUE",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the gross value ."
+      },
+      {
+        "name": "SALE_COMM",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the commision ."
+      },
+      {
+        "name": "SALE_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the discount ."
+      },
+      {
+        "name": "SALE_SERVICE_TAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the service tax of the sales ."
+      },
+      {
+        "name": "COMM_SRV_TAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the commission service tax ."
+      },
+      {
+        "name": "COST_AMT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the cost amount ."
+      },
+      {
+        "name": "ANT_EX_FLAG",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "This holds the status of the anticipated exclusion ."
+      },
+      {
+        "name": "ACT_EX_FLAG",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "This holds the status of the actual exclusion ."
+      },
+      {
+        "name": "ADJ_EX_FLAG",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "This holds the status of the adjusted exclusion ."
+      },
+      {
+        "name": "POSTED_REV",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted revenue ."
+      },
+      {
+        "name": "POSTED_COMM",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted commission ."
+      },
+      {
+        "name": "POSTED_DISCOUNT",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted discount ."
+      },
+      {
+        "name": "POSTED_SERV_TAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted service tax ."
+      },
+      {
+        "name": "POSTED_COMM_SERV_TAX",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted commission service tax ."
+      },
+      {
+        "name": "POSTED_COST",
+        "data_type": "NUMERIC (19,6)",
+        "nullable": "YES",
+        "comment": "This holds the posted cost ."
+      },
+      {
+        "name": "PRICE_METHODOLOGY",
+        "data_type": "CHARACTER VARYING(1)",
+        "nullable": "YES",
+        "comment": "THIS HOLDS THE PRICE METHODOLOGY OF THE PACKAGE ."
+      },
+      {
+        "name": "CATEGORY",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "THIS HOLDS THE CATEGORY OF THE PACKAGE ."
+      }
+    ],
+    "source_file": "itrvl_fna.HTML"
+  },
+  {
+    "name": "ITRVL_MST_PACKAGE_CODE_VW",
+    "module": "REPORT",
+    "description": "Package code master",
+    "columns": [
+      {
+        "name": "PACKAGE_ID",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "Primary Key ."
+      },
+      {
+        "name": "PKG_CODE",
+        "data_type": "CHARACTER VARYING(5)",
+        "nullable": "YES",
+        "comment": "Package code ."
+      },
+      {
+        "name": "MARKET_CODE",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "market code ."
+      },
+      {
+        "name": "OFFICE_CODE",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "office code ."
+      },
+      {
+        "name": "PKG_NAME",
+        "data_type": "CHARACTER VARYING(10)",
+        "nullable": "YES",
+        "comment": "package name ."
+      },
+      {
+        "name": "PACKAGE_TYPE",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "package type ."
+      },
+      {
+        "name": "PACKAGE_THEME",
+        "data_type": "CHARACTER VARYING(11)",
+        "nullable": "YES",
+        "comment": "package theme ."
+      },
+      {
+        "name": "BOOK_PACK_START_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "booking start date ."
+      },
+      {
+        "name": "BOOK_PACK_END_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "booking end date ."
+      },
+      {
+        "name": "PACKAGE_SUBTYPE",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "package sub type ."
+      },
+      {
+        "name": "PKGCODE_INFO",
+        "data_type": "CHARACTER VARYING(2000)",
+        "nullable": "YES",
+        "comment": "package info ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(100)",
+        "nullable": "YES",
+        "comment": "Last Modified User Details ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "Last Modified Date ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "Status of the offer record (Active/Inactive/Deleted) ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "Company Id ."
+      }
+    ],
+    "source_file": "itrvl_mst.HTML"
+  },
+  {
+    "name": "ITRVL_MST_PKGCLASSIFICATION_VW",
+    "module": "REPORT",
+    "description": null,
+    "columns": [
+      {
+        "name": "MASTER_CODE",
+        "data_type": "INTEGER",
+        "nullable": "YES",
+        "comment": "master_code ."
+      },
+      {
+        "name": "MASTER_KEY",
+        "data_type": "CHARACTER VARYING(30)",
+        "nullable": "YES",
+        "comment": "unique key to identify each base master ."
+      },
+      {
+        "name": "MASTER_VALUE",
+        "data_type": "CHARACTER VARYING(4000)",
+        "nullable": "YES",
+        "comment": "This column stores the name of the master ."
+      },
+      {
+        "name": "DESCRIPTION",
+        "data_type": "CHARACTER VARYING(5000)",
+        "nullable": "YES",
+        "comment": "This column stores the master description ."
+      },
+      {
+        "name": "MASTER_INFORMATION",
+        "data_type": "CHARACTER VARYING(4000)",
+        "nullable": "YES",
+        "comment": "This column stores the master information ."
+      },
+      {
+        "name": "LAST_MODIFIED_DATE",
+        "data_type": "TIMESTAMP WITHOUT TIME ZONE",
+        "nullable": "YES",
+        "comment": "This column stores the date on which the record was last modified ."
+      },
+      {
+        "name": "LAST_MODIFIED_BY",
+        "data_type": "CHARACTER VARYING(50)",
+        "nullable": "YES",
+        "comment": "This column stores the user id who modified the record last ."
+      },
+      {
+        "name": "STATUS",
+        "data_type": "SMALLINT",
+        "nullable": "YES",
+        "comment": "This column stores the status if the master 1: ACTIVE 0: INACTIVE 2: DELETE ."
+      },
+      {
+        "name": "META_DATA",
+        "data_type": "TEXT",
+        "nullable": "YES",
+        "comment": "This column stores the meta data information of the record in json format ."
+      },
+      {
+        "name": "COMPANY_ID",
+        "data_type": "CHARACTER VARYING(4)",
+        "nullable": "YES",
+        "comment": "This column stores the Company Id ."
+      }
+    ],
+    "source_file": "itrvl_mst.HTML"
+  }
+]

@@ -1,0 +1,2628 @@
+================================================================================
+PACKAGE/PKG TABLES ANALYSIS REPORT
+================================================================================
+
+
+================================================================================
+Table #1
+================================================================================
+Source File: itrvl_act.HTML
+Table Name: ITRVL_ACT_INV_PKG_VW
+Module: REPORT
+Description: Table which stores applicability criteria package codes
+
+Columns (7):
+--------------------------------------------------------------------------------
+  - PACKAGE_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key . .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Tenant Id. Compliance with Conglomerate Config .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Company Id. Compliance with Conglomerate Config .
+
+  - INVENTORY_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Foreign Key to ITRVL_ACT_INVENTORY table. .
+
+  - PKG_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Holds PACKAGE Code .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified User Details .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+
+================================================================================
+Table #2
+================================================================================
+Source File: itrvl_agn.HTML
+Table Name: ITRVL_AGN_COM_PKG_CLSSFCN_VW
+Module: REPORT
+Description: This table stores one to many pckg classification code under a product criteria
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - PKG_CLSSFCN_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key for itrvl_agn_com_pkg_clssfcn .
+
+  - PROF_PROD_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Standard Commission Product Criteria Def. .
+
+  - COMM_REST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Commission Restriction Def .
+
+  - CLSSFCN_CODE
+    Type: CHARACTER VARYING(8)
+    Nullable: YES
+    Comment: Unique classification code . .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Package classification Status .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: The user who modified the Package classification detail .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The last modified date on which the Package classification                                                                                                            
+ is modified .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company ID .
+
+
+================================================================================
+Table #3
+================================================================================
+Source File: itrvl_agn.HTML
+Table Name: ITRVL_AGN_COM_PKG_SERCODE_VW
+Module: REPORT
+Description: This table stores one to many pckg series code under a product criteria
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - PKG_SERIES_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key for itrvl_agn_com_pkg_sercode .
+
+  - PROF_PROD_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Standard Commission Product Criteria Def. .
+
+  - COMM_REST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Commission Restriction Def .
+
+  - PKG_SER_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Unique package series code . .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Package series Status .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: The user who modified the Package series detail .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The last modified date on which the Package series                                                                                                                    
+ is modified .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company ID .
+
+
+================================================================================
+Table #4
+================================================================================
+Source File: itrvl_agn.HTML
+Table Name: ITRVL_AGN_COM_PKG_TYPE_VW
+Module: REPORT
+Description: This table stores one to many pckg type code under a product criteria
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - PKG_TYPE_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key for itrvl_agn_com_pkg_type .
+
+  - PROF_PROD_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Standard Commission Product Criteria Def. .
+
+  - COMM_REST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK- PK of Commission Restriction Def .
+
+  - PKG_TYPE
+    Type: CHARACTER VARYING(8)
+    Nullable: YES
+    Comment: Unique package type code . .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Package Type Status .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: The user who modified the Package Type detail .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The last modified date on which the Package Type                                                                                                                      
+ is modified .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company ID .
+
+
+================================================================================
+Table #5
+================================================================================
+Source File: itrvl_agn.HTML
+Table Name: ITRVL_AGN_COM_PRD_PKGTHEME_VW
+Module: REPORT
+Description: Table which stores the Pakage Theme Code
+
+Columns (7):
+--------------------------------------------------------------------------------
+  - PKG_THEME_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Pakage Theme Id .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company Id of the user .
+
+  - PROF_PROD_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Product Id .
+
+  - COMM_REST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Restriction Id .
+
+  - PKG_THEME_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Pakage Theme Code .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: UserId of the User who has last modified .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+
+================================================================================
+Table #6
+================================================================================
+Source File: itrvl_agn.HTML
+Table Name: ITRVL_AGN_COM_PRD_PKG_CODE_VW
+Module: REPORT
+Description: To store product package codes
+
+Columns (7):
+--------------------------------------------------------------------------------
+  - PKG_CODE_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Package Code Id .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company Id of the user .
+
+  - PRD_SLAB_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Product Slab Id .
+
+  - COMM_REST_MAXCOMCAP_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Max Com Id .
+
+  - PKG_CODE
+    Type: CHARACTER VARYING(10)
+    Nullable: YES
+    Comment: Package Code .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: UserId of the User who has last modified .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+
+================================================================================
+Table #7
+================================================================================
+Source File: itrvl_air.HTML
+Table Name: ITRVL_AIR_CAT_PKG_AVAIL_VW
+Module: REPORT
+Description: Air catalogue package availability table
+
+Columns (9):
+--------------------------------------------------------------------------------
+  - PKG_AVAIL_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: PRIMARY KEY SEQUENCE .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company ID .
+
+  - AIR_CATALOGUE_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: FK TO THE CATALOGUE DEF TABLE .
+
+  - PKG_CAT
+    Type: CHARACTER VARYING(16)
+    Nullable: YES
+    Comment: DESTINATION CODE FROM PACKAGE DEF .
+
+  - PKG_TYPE
+    Type: CHARACTER VARYING(8)
+    Nullable: YES
+    Comment: PACKAGE TYPE FROM PACKAGE DEF .
+
+  - PKG_COD
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: PACKAGE CODE FROM PACKAGE DEF .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Status of the record (Active/Inactive/Deleted) .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified User Details .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+
+================================================================================
+Table #8
+================================================================================
+Source File: itrvl_air.HTML
+Table Name: ITRVL_AIR_INVPKG_VW
+Module: REPORT
+Description: Air inventory package table
+
+Columns (6):
+--------------------------------------------------------------------------------
+  - PKG_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PK SEQUENCE .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: CUSTOMER ID .
+
+  - PKG_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: PACKAGE CODE FROM PACKAGE MODULE .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - APPLICABILITY_SWITCH
+    Type: SMALLINT
+    Nullable: YES
+    Comment: 0 = include, 1= exclude, 2 = applicable to all .
+
+
+================================================================================
+Table #9
+================================================================================
+Source File: itrvl_air.HTML
+Table Name: ITRVL_AIR_INV_PKG_CATEGORY_VW
+Module: REPORT
+Description: Block Package category table, i.e, table containing package categories associated with particular block inventory
+
+Columns (6):
+--------------------------------------------------------------------------------
+  - PKG_CATEGORY_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Primary Key joining with Criteria table .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company ID .
+
+  - PKG_CATEGORY_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Package Category Code .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - APPLICABILITY_SWITCH
+    Type: SMALLINT
+    Nullable: YES
+    Comment: 0 = include, 1= exclude, 2 = applicable to all .
+
+
+================================================================================
+Table #10
+================================================================================
+Source File: itrvl_air.HTML
+Table Name: ITRVL_AIR_INV_PKG_SERIES_VW
+Module: REPORT
+Description: Block Package series table, i.e, table containing package series associated with particular block inventory
+
+Columns (6):
+--------------------------------------------------------------------------------
+  - PKG_SERIES_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Primary Key joining with Criteria table .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company ID .
+
+  - PKG_SERIES_CODE
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Package Series Code .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - APPLICABILITY_SWITCH
+    Type: SMALLINT
+    Nullable: YES
+    Comment: 0 = include, 1= exclude, 2 = applicable to all .
+
+
+================================================================================
+Table #11
+================================================================================
+Source File: itrvl_air.HTML
+Table Name: ITRVL_AIR_SUP_CP_PKG_INFO_VW
+Module: REPORT
+Description: Air cost and price package information table
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - PKG_SERIES_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key sequence .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company Id .
+
+  - COST_PRICE_DEF_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: fk to table ITRVL_SUP_AIR_CP_BASE_DEF .
+
+  - PKG_SERIES
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: package series code from package def table .
+
+  - PACKAGE_CODE
+    Type: CHARACTER VARYING(30)
+    Nullable: YES
+    Comment: package under the selected package series from the package def table .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Status of the offer record (Active/Inactive/Deleted) .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified User Details .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+
+================================================================================
+Table #12
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_AMD_POLICY_VW
+Module: REPORT
+Description: Table to store package amendment policy details
+
+Columns (15):
+--------------------------------------------------------------------------------
+  - AMEND_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Amendment ID .
+
+  - AMOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: The amount for amendment .
+
+  - AMEND_TYPE
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Type of the amendment .
+
+  - AMEND_POLICY_DESC
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Description of the amendment Policy .
+
+  - CURRENCY
+    Type: CHARACTER VARYING(5)
+    Nullable: YES
+    Comment: Currency Code .
+
+  - FROM_DATE_TIME
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Date from when the policy is applicable .
+
+  - TO_DATE_TIME
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The date till when the policy is applicable .
+
+  - PAX_TYPE
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Passenger Types for which this is applicable .
+
+  - APPL_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Is the application type is per pax/ per room or once .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: The Super PNR number to which this is associated .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: The Component in the super pnr to which the policy is related .
+
+  - RULEID
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: This column is to store the corresponding rule ID .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: the company id .
+
+  - TIME_ZONE
+    Type: CHARACTER VARYING(40)
+    Nullable: YES
+    Comment: Holds the timezone of the amendment policy .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #13
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_BENEFIT_APPL_VW
+Module: REPORT
+Description: This table is to save the promotion benefit applicability details
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - PKG_BENEFIT_APPL_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the promotion benefit applicability id .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores super pnr number .
+
+  - APPL_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the promotion benefit applicability type .
+
+  - PKG_PROMO_BENEFIT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the promotion benefit id .
+
+  - PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the pax id .
+
+  - UNIT_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the unit id .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company id .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Stores the last modified by .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the last modified date .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #14
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_CHRG_VW
+Module: REPORT
+Description: The charge split up for the package
+
+Columns (62):
+--------------------------------------------------------------------------------
+  - CHARGE_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Charge Id ; Primary Key .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign Key to Package Booking Table .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Customer Id or User Id .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Super PNR Number  : Stores the super pnr number which holds the package booking .
+
+  - CHARGE_LEVEL
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Indicates the charge level. Varies for each domain. eg: per night, per pax etc. .
+
+  - CHARGE_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the type of charge - FARE, ROOMCHARGE, TAX, SURCHARGE etc. .
+
+  - CURRENCY
+    Type: CHARACTER VARYING(6)
+    Nullable: YES
+    Comment: Stores the currency associated with the charge .
+
+  - BASE_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the base amount associated with the charge type .
+
+  - DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the discount associated with the charge type .
+
+  - GROSS_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the gross amount associated with the charge type .
+
+  - NET_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: "Stores the net amount associated with the charge type" .
+
+  - COMMISSIONABLE_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores whether the charge is commissionable or not .
+
+  - AGENCY_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the agency commission associated with the charge .
+
+  - VENDOR_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the vendor commission associated with the charge .
+
+  - MARK_UP
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the MarkUp associated with the charge .
+
+  - PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the Passenger ID associated with the charge .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+  - BASE_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores base cost associated with the charge type .
+
+  - MANUAL_ADD_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Is the charge manually added .
+
+  - REFUNDABLE_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Is the charge manually added .
+
+  - BASE_OVERRIDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: base_overriden_ind .
+
+  - GROSS_OVERRIDDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: gross_overridden_ind .
+
+  - COMM_OVERRIDDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: comm_overridden_ind .
+
+  - ORIGINAL_BASE_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original Base cost before override  .
+
+  - ORIGINAL_GROSS_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original gross price before override  .
+
+  - ORIGINAL_COMMISSION_AMT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: before override  .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores whetehe the charge is added manually or from pring module .
+
+  - ORIGINAL_SUP_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original cost obtained from the supplier before applying supplier promotions if any .
+
+  - SUPPLIER_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the discount applied via supplier promotions if any .
+
+  - PRICE_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: price_servicetax .
+
+  - COST_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: cost_servicetax .
+
+  - COMMISSION_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: commission_servicetax .
+
+  - VDR_CUR
+    Type: CHARACTER VARYING(6)
+    Nullable: YES
+    Comment: This holds the Vendor currency .
+
+  - COST_VDR_CUR
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the base cost in vendor currency .
+
+  - BASE_PRC_VDR_CUR
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the base price in vendor currency .
+
+  - EXCHG_RATE_TO_PRC_CUR
+    Type: REAL
+    Nullable: YES
+    Comment: This holds the exchange rate of vendor currency to pricing currency .
+
+  - VENDOR_COMM_PERCENTAGE
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the vendor commission percentage .
+
+  - VENDOR_COMM_OVERRIDDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates whether the vendor commission has been overridden .
+
+  - ORIGINAL_VENDOR_COMM_AMT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original vendor commission amount before any overriding has been performed .
+
+  - ORIGINAL_VENDOR_COMM_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original vendor commission percentage before any overriding has been performed .
+
+  - CATEGORY
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the Charge Category .
+
+  - VAT_CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: Stores the value added tax code applied .
+
+  - PRICE_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the customer service tax percentage .
+
+  - COST_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the supplier service tax percentage .
+
+  - COMMISSION_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the commission service tax percentage .
+
+  - TC_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Tour Conductor Commission calculated by Scheduler .
+
+  - SERVICETAX_LEVELCODE
+    Type: CHARACTER VARYING(10)
+    Nullable: YES
+    Comment: Stores the service tax level code .
+
+  - TC_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Tour Conductor Discount calculated by Scheduler .
+
+  - ADJUSTED_AMOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the ADJUSTED_AMOUNT in case of price/discount overrider .
+
+  - STD_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the standard agency commissionr .
+
+  - BONUS_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the bonus agency commissionr .
+
+  - STD_COMMISSION_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the standard agency commission percentage .
+
+  - BONUS_COMMISSION_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the bonus agency commission percentage .
+
+  - ORIGINAL_STD_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original standard agency commissionr .
+
+  - ORIGINAL_BONUS_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original bonus agency commissionr .
+
+  - ORIGINAL_STD_COMM_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original standard agency commission percentage .
+
+  - ORIGINAL_BONUS_COMM_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original bonus agency commission percentage .
+
+  - PRICE_TAX_CLSFCN
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the price tax classification code .
+
+  - COMM_TAX_CLSFCN
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the commission tax classification code .
+
+  - IS_TAX_INCL_COMM
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive commission .
+
+  - IS_TAX_INCL_PRICE
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive price indicator .
+
+  - IS_TAX_INCL_COST
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive cost indicator .
+
+
+================================================================================
+Table #15
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_DEST_VW
+Module: REPORT
+Description: The package destintion table
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - DESTN_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Destination Id ; Primary Key .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign Key to Package Booking Table .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Super PNR Number  : Stores the super pnr number which holds the package booking .
+
+  - DEST_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: The destination code  .
+
+  - REGION
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: The region  .
+
+  - START_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The package start date on the destination .
+
+  - END_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The package end date on the destination .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: The company id .
+
+  - DEST_TIMEZONE
+    Type: CHARACTER VARYING(40)
+    Nullable: YES
+    Comment: Holds the timezone of destination .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #16
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_ITEM_CHRG_VW
+Module: REPORT
+Description: Details of Package Item Charges
+
+Columns (62):
+--------------------------------------------------------------------------------
+  - CHARGE_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Charge Id ; Primary Key .
+
+  - ITEM_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PK of the table .
+
+  - CHARGE_LEVEL
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Charge level .
+
+  - CHARGE_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Charge type .
+
+  - CURRENCY
+    Type: CHARACTER VARYING(6)
+    Nullable: YES
+    Comment: Currency .
+
+  - BASE_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Base price .
+
+  - DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Discount .
+
+  - GROSS_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Gross price .
+
+  - NET_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Net price .
+
+  - COMMISSIONABLE_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Commissionable indicator .
+
+  - AGENCY_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Agency commission .
+
+  - VENDOR_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Vendor commission .
+
+  - MARK_UP
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Mark up .
+
+  - PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Passenger reference .
+
+  - BASE_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Base Cost .
+
+  - MANUAL_ADD_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Manual addition indicator .
+
+  - REFUNDABLE_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Refundable indicator .
+
+  - BASE_OVERRIDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Base overriden indicator .
+
+  - GROSS_OVERRIDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Gross overriden indicator .
+
+  - COMM_OVERRIDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Commission overriden indicator .
+
+  - ORIGINAL_BASE_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original Base cost .
+
+  - ORIGINAL_GROSS_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original gross price .
+
+  - ORIGINAL_COMMISSION_AMT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original commission amount .
+
+  - ORIGINAL_SUP_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Original supplier cost .
+
+  - SUPPLIER_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Suuplier discount .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company id .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Tenant id .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Super PNR number .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Created on date .
+
+  - VDR_CUR
+    Type: CHARACTER VARYING(6)
+    Nullable: YES
+    Comment: This holds the Vendor currency .
+
+  - EXCHG_RATE_TO_PRC_CUR
+    Type: REAL
+    Nullable: YES
+    Comment: This holds the exchange rate of vendor currency to pricing currency .
+
+  - PRICE_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Price service tax .
+
+  - COST_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Cost service tax .
+
+  - COST_VDR_CUR
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the base cost in vendor currency .
+
+  - COMMISSION_SERVICETAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Commission service tax .
+
+  - BASE_PRC_VDR_CUR
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the base price in vendor currency .
+
+  - VENDOR_COMM_PERCENTAGE
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the vendor commission percentage .
+
+  - VENDOR_COMM_OVERRIDDEN_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates whether the vendor commission has been overridden .
+
+  - ORIGINAL_VENDOR_COMM_AMT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original vendor commission amount before any overriding has been performed .
+
+  - ORIGINAL_VENDOR_COMM_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original vendor commission percentage before any overriding has been performed .
+
+  - CATEGORY
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the Charge Category .
+
+  - VAT_CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: Stores the value added tax code applied .
+
+  - PRICE_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the customer service tax percentage .
+
+  - COST_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the supplier service tax percentage .
+
+  - COMMISSION_SERVICETAX_PCT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the commission service tax percentage .
+
+  - TC_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Tour Conductor Commission calculated by Scheduler .
+
+  - SERVICETAX_LEVELCODE
+    Type: CHARACTER VARYING(10)
+    Nullable: YES
+    Comment: Stores the service tax level code .
+
+  - TC_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Tour Conductor Discount calculated by Scheduler .
+
+  - ADJUSTED_AMOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the ADJUSTED_AMOUNT in case of price/discount override .
+
+  - STD_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the standard agency commission .
+
+  - BONUS_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the bonus agency commission .
+
+  - STD_COMMISSION_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the standard agency commission percentage .
+
+  - BONUS_COMMISSION_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the bonus agency commission percentage .
+
+  - ORIGINAL_STD_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original standard agency commission .
+
+  - ORIGINAL_BONUS_COMMISSION
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the original bonus agency commission .
+
+  - ORIGINAL_STD_COMM_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original standard agency commission percentage .
+
+  - ORIGINAL_BONUS_COMM_PERCENT
+    Type: DOUBLE PRECISION
+    Nullable: YES
+    Comment: Stores the original bonus agency commission percentage .
+
+  - PRICE_TAX_CLSFCN
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the price tax classification code .
+
+  - COMM_TAX_CLSFCN
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the commission tax classification code .
+
+  - IS_TAX_INCL_COMM
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive commission .
+
+  - IS_TAX_INCL_PRICE
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive price indicator .
+
+  - IS_TAX_INCL_COST
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores the tax inclusive cost indicator .
+
+
+================================================================================
+Table #17
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_ITEM_GEN_PAX_VW
+Module: REPORT
+Description: Pax Details for each Generic Itinerary Item
+
+Columns (7):
+--------------------------------------------------------------------------------
+  - COMP_PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: COMP_PAX_ID Primary Key .
+
+  - PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign Key to PNR Pax Table .
+
+  - ITEM_GEN_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign Key to Generic Itinerary Item Table .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the super pnr number which holds the package booking .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Company Id .
+
+  - ITEM_PAX_STATUS
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the current status of the guests in the package .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the date of booking .
+
+
+================================================================================
+Table #18
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_ITEM_GEN_VW
+Module: REPORT
+Description: Details for each Generic Itinerary Item
+
+Columns (5):
+--------------------------------------------------------------------------------
+  - ITEM_GEN_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: ITEM_GEN_ID Primary Key .
+
+  - ITEM_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PK of the table .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the super pnr number which holds the package booking .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Company Id .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #19
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_ITEM_ROUTE_VW
+Module: REPORT
+Description: Table to store package item route details(for Transfer and AIR)
+
+Columns (12):
+--------------------------------------------------------------------------------
+  - ROUTE_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Route ID;Primary key .
+
+  - ITEM_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PK of the table .
+
+  - ITEM_SEQUENCE
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Itinerary sequence number of transfer in this route .
+
+  - START_DAY
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Start day of the transfer item in this route .
+
+  - END_DAY
+    Type: SMALLINT
+    Nullable: YES
+    Comment: End day of the transfer item in this route .
+
+  - FROM_LOCATION_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: From Location Type .
+
+  - TO_LOCATION_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: To Location Type .
+
+  - FROM_LOCATION
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: From Location Code .
+
+  - TO_LOCTION
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: To Location Code .
+
+  - TRIP_TYPE
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Type of trip. Possible values are O/R (Oneway/Round trip) .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company id .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #20
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_ITEM_VW
+Module: REPORT
+Description: Details of Package Items
+
+Columns (24):
+--------------------------------------------------------------------------------
+  - ITEM_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PK of the table .
+
+  - PKG_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign key (PK of PKG_MAIN table) .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Foreign key (PK of BKG_COMPONENT table) .
+
+  - SEQUENCE_NO
+    Type: INTEGER
+    Nullable: YES
+    Comment: Sequence number of the item in the itinerary .
+
+  - ITEM_TYPE
+    Type: CHARACTER VARYING(3)
+    Nullable: YES
+    Comment: Item type of the item in the itinerary .
+
+  - ITEM_CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: Item code of the item in the itinenary .
+
+  - APPLICABILITY_TYPE
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Applicability type of the item (M/E/O) .
+
+  - SOURCE_TYPE
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Source type of the item (G - Generic/C - Catalogued in iTravel/I - Interface) .
+
+  - IS_LEAD_ITEM
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates if the item is lead or not .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company id .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Tenant id .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Super PNR number .
+
+  - START_DAY
+    Type: SMALLINT
+    Nullable: YES
+    Comment: StartDay in itinerary .
+
+  - END_DAY
+    Type: SMALLINT
+    Nullable: YES
+    Comment: EndDay in itinerary .
+
+  - CATEGORY_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Item Category or Rate plan code .
+
+  - LOCATION
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Location of Item .
+
+  - UNIQUE_REF_ID
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Holds the item reference id  .
+
+  - OCCURENCE_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Item occurrence code .
+
+  - SUBS_GRP_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Substitutable Group code to which this Item belongs .
+
+  - IS_REMOVED
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates whether the item is removed as part of amendment flow .
+
+  - IS_FLEXIBLE
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates if the item is flexible or not. The value will be true for flexible item and false for fixed item .
+
+  - RATE_PLAN
+    Type: CHARACTER VARYING(27)
+    Nullable: YES
+    Comment: Rate Plan code as selected by the user .
+
+  - ITEM_REF_ID
+    Type: TEXT
+    Nullable: YES
+    Comment: Unique identifier to identify each item/item offer uniquely across package shopping/booking/amendment flows .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #21
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_MAIN_VW
+Module: REPORT
+Description: Table to store the package booking master data
+
+Columns (27):
+--------------------------------------------------------------------------------
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the component id which uniquely identifies the package component .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the tenant id of user who created the booking .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the super pnr number which holds the package booking .
+
+  - PACKAGE_CODE
+    Type: CHARACTER VARYING(25)
+    Nullable: YES
+    Comment: Stores the package code of the package .
+
+  - PACKAGE_NAME
+    Type: CHARACTER VARYING(150)
+    Nullable: YES
+    Comment: Stores the name of the package .
+
+  - PKG_DEP_DATE_TIME
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the departure date and time of the package .
+
+  - CURRENCY_CODE
+    Type: CHARACTER VARYING(5)
+    Nullable: YES
+    Comment: Stores the currency of the package .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company id for the booking .
+
+  - RATE_PLAN
+    Type: CHARACTER VARYING(27)
+    Nullable: YES
+    Comment: Stores the rate plan code of the package .
+
+  - PACKAGE_CATEGORY
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the package category .
+
+  - HUB_CODE
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the hub code of the package . Not in scope
+
+  - DURATION
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Package Duration  .
+
+  - THEME_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Package Theme  .
+
+  - SERIES_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Package Series  . Not in scope
+
+  - LEAD_PKG_IND
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates whether a pkg is lead or variation  . Not in scope
+
+  - LEAD_ITEM_CODE
+    Type: CHARACTER VARYING(30)
+    Nullable: YES
+    Comment: Package Lead Item Code .
+
+  - LEAD_ITEM_CAT
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Package Lead Item Category .
+
+  - BRAND_CODE
+    Type: CHARACTER VARYING(30)
+    Nullable: YES
+    Comment: Package Brand Code .
+
+  - PRICE_METHODOLOGY
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Possible Values are "P" Price-roll up "C" Cost roll up "D" Direct pricing .
+
+  - PRICE_OPACITY
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Possible Values are "T" Transparent "O" Opaque .
+
+  - ITIN_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: itinerary code of the package . ITIN_CODE refers to the package itinerary code. Whereas, LEAD_ITEM_CODE refers to the product code of the lead item within package. For eg, if cruise is the lead item in package, this refers to the cruise code.
+
+  - IS_APPORTION_APPLIED
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Stores as TRUE if Price apportion is done else as FALSE . Not in scope
+
+  - SLCT_AIRPORT_CODES
+    Type: CHARACTER VARYING(150)
+    Nullable: YES
+    Comment: Airport codes selected by pax to fly from .
+
+  - LEAD_ITEM_FARECLS
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: HOLDS FARE CLASS OF LEAD ITEM .
+
+  - LEAD_ITEM_RATEPLAN_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: HOLDS THE RATEPLAN TYPE OF LEAD ITEM .
+
+  - LEAD_ITEM_DURATION
+    Type: CHARACTER VARYING(30)
+    Nullable: YES
+    Comment: HOLDS DURATION OF LEAD ITEM .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #22
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_PAX_PROM_VW
+Module: REPORT
+Description: PACKAGE PER PAX CHARGE BOOKING PROMOTION DETAILS TABLE
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - PROMO_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: PRIMARY KEY SEQUNCE .
+
+  - CHARGE_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Charge Id ; Primary Key .
+
+  - PKG_PROMO_CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: PROMOTION CODE .
+
+  - AMOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: TOTAL BENEFIT AMOUNT OF THE PROMOTION .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: CUSTOMER ID .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: FOR AUDITING .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #23
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_PAX_VW
+Module: REPORT
+Description: Table to store the passenger details in a package belong to a booking
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - COMP_PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the package pax id which uniquely identifies each passenger in the package component .
+
+  - PAX_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the passenger id which uniquely identifies each guest in the package component .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the component id which uniquely identifies the package component .
+
+  - PKG_PAX_STATUS
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the current status of the guests in the package .
+
+  - LOYALTY_MEMB_ID
+    Type: CHARACTER VARYING(32)
+    Nullable: YES
+    Comment: Stores unique id of the member in the program .
+
+  - LOYALTY_PGM_ID
+    Type: CHARACTER VARYING(16)
+    Nullable: YES
+    Comment: Stores id to indicate the company owner of the loyalty program .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores the super pnr number which holds the hotel booking .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the company id for the booking .
+
+  - PAX_TOTAL_PRICE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Stores the passenger total price for this particular component in pricing currency .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #24
+================================================================================
+Source File: itrvl_bkg.HTML
+Table Name: ITRVL_BKG_PKG_PROM_BENEFIT_VW
+Module: REPORT
+Description: This table is to save the promotion benefit details
+
+Columns (13):
+--------------------------------------------------------------------------------
+  - PKG_PROMO_BENEFIT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the promotion benefit id .
+
+  - SUPER_PNR_NO
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: Stores super pnr number .
+
+  - PROMO_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the promotion id .
+
+  - BENEFIT_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the benefit id .
+
+  - BENEFIT_LEVEL
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the benefit level .
+
+  - COMP_PROMO_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the component promotion id .
+
+  - COMPONENT_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores the component id .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Stores the company id .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Stores the last modified by .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the last modified date .
+
+  - BENEFIT_NAME
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the benefit name .
+
+  - BENEFIT_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: Discount amount for each benefit .
+
+  - CREATED_ON
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores the booking creation date .
+
+
+================================================================================
+Table #25
+================================================================================
+Source File: itrvl_cru.HTML
+Table Name: ITRVL_CRU_INV_PKG_GRP_CAT_VW
+Module: REPORT
+Description: This table is used to store the Cruise Inventory Cabin.
+
+Columns (8):
+--------------------------------------------------------------------------------
+  - CAT_REQ_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key Sequence. .
+
+  - REQUEST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Request Id requested by Package/Group Request. .
+
+  - CATEGORY_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: This field is used to store Category Code for Package/Group Request.. .
+
+  - REAL_ENT
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Real Space Entitled for Package/Group Request.. .
+
+  - GUAR_ENT
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Guarantee Space Entitled for Package/Group Request.. .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified By. .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date. .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: This field is used to map the Company Id. .
+
+
+================================================================================
+Table #26
+================================================================================
+Source File: itrvl_cru.HTML
+Table Name: ITRVL_CRU_INV_PKG_GRP_REQ_VW
+Module: REPORT
+Description: This table is used to store the Cruise Inventory Package/Group Request
+
+Columns (29):
+--------------------------------------------------------------------------------
+  - REQUEST_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store pkg/grp request id and is referenced to ITRVL_CRU_INV_PKG_GRP_REQ table .
+
+  - CRUISE_ID
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: This field is used to store Cruise code requested by Package/Group Request. .
+
+  - BLOCK_ID
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: This field is used to store Block Id for Package/Group Request. .
+
+  - BLOCK_NAME
+    Type: CHARACTER VARYING(150)
+    Nullable: YES
+    Comment: This field is used to store Block Name for Package/Group Request. .
+
+  - BLOCK_TYPE
+    Type: CHARACTER VARYING(25)
+    Nullable: YES
+    Comment: This field is used to store Block Type for Package/Group Request. .
+
+  - REQUESTOR_TYPE
+    Type: CHARACTER VARYING(3)
+    Nullable: YES
+    Comment: This field is used to store Requestor Type for Package/Group Request. .
+
+  - GRP_PKG_ID
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: This field is used to store Group Package Id. .
+
+  - BLOCK_NATURE
+    Type: CHARACTER VARYING(25)
+    Nullable: YES
+    Comment: This field is used to store Block Nature for Package/Group Request. .
+
+  - REAL_ALLOC
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Real Space Allocation. for Package/Group Request .
+
+  - REAL_DEALLOC
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Real Space Deallocation for Package/Group Request. .
+
+  - GUAR_ALLOC
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Guarantee Space Allocation for Package/Group Request. .
+
+  - GUAR_DEALLOC
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Guarantee Space Deallocation for Package/Group Request. .
+
+  - IS_REAL_OVERSELL
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: This field is used to store Real Space Oversell. .
+
+  - IS_GUAR_OVERSELL
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: This field is used to store Guarantee Space Oversell. .
+
+  - BLOCK_STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: This field is used to store Block Status for Package/Group Request. .
+
+  - PRIORITY
+    Type: INTEGER
+    Nullable: YES
+    Comment: This field is used to store Priority. .
+
+  - IS_INV_INFO
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: This field is used to store whether Inventory Information exist. .
+
+  - IS_CABIN_INFO
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: This field is used to store whether Cabin Information exist. .
+
+  - CREATION_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: creation_date .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified By. .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date. .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: This field is used to map the Company Id. .
+
+  - CABIN_CODE
+    Type: TEXT
+    Nullable: YES
+    Comment: This field is used to store Cabin Code for Package/Group Request. .
+
+  - OPERATION_MODE
+    Type: CHARACTER VARYING(15)
+    Nullable: YES
+    Comment: This field is used to store Operation Mode.Possible values are ADD,UPDATE,CUTBACK AND RELEASE .
+
+  - GRP_CLS_CODE
+    Type: TEXT
+    Nullable: YES
+    Comment: This column is used to save Group Classification code. .
+
+  - GRP_CAT_CODE
+    Type: TEXT
+    Nullable: YES
+    Comment: This column is used to save Group Category code. .
+
+  - PACKAGE_DEPARTURE_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: The column is used to store the Package departure Date for a Package Static block .
+
+  - PACKAGE_CATEGORY
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: The column is used to store the Package Category for a Package Static block .
+
+  - PACKAGE_GROUP_CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: The column is used to store the Group Code for a Package Static block .
+
+
+================================================================================
+Table #27
+================================================================================
+Source File: itrvl_cru.HTML
+Table Name: ITRVL_CRU_OPS_PKG_GRP_VW
+Module: REPORT
+Description: Table to store impacted package/group details corresponding to action details id in ITRVL_CRU_OPS_ACTION_DTLS table
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - CRU_OPS_PKG_GRP_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Field to store the ID to identify the package/group code .
+
+  - CRU_OPS_ACTION_DTLS_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Reference to ITRVL_CRU_OPS_ACTION_DTLS .
+
+  - CODE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: Field to store Impacted pacakge or group Code .
+
+  - PACKAGE_TYPE
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: Field to store If package (fixed or flexible) .
+
+  - DEPARTURE_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Field to store Impacted cruise Departure Date .
+
+  - UPDATE_STATUS
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: Field to store Success or failed status (Sucess-S,Failed-F) .
+
+  - IS_PACKAGE
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Field to indicate if there is a package .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Field to store Company information .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Field to store modified user information .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Field to store modified date information .
+
+
+================================================================================
+Table #28
+================================================================================
+Source File: itrvl_cru.HTML
+Table Name: ITRVL_CRU_PRI_RTPLN_PKGS_VW
+Module: REPORT
+Description: This is a table for package basic details defined in Cruise Rateplan.
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - PACKAGEID
+    Type: BIGINT
+    Nullable: YES
+    Comment: This column is used to save the FOREIGN KEY REFERENCES itrvl_cru.itrvl_cru_pri_rtpln_pkgs (packageid) .
+
+  - RATEPLANID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Stores foreign key reference to ITRVL_CRU_PRI_RATEPLNDEF table .
+
+  - PACKAGE_CODE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the package name in cruise rate plan definition .
+
+  - VALIDITY_START_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores Validity Start Date of package in cruise rate plan definition .
+
+  - VALIDITY_END_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores Validity End Date in cruise rate plan definition .
+
+  - CATEGORY_CODE
+    Type: TEXT
+    Nullable: YES
+    Comment: This field stores the catagory code of the package. .
+
+  - ITEM_CODE
+    Type: TEXT
+    Nullable: YES
+    Comment: This field stores the item code of the package .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Stores Last Modified Customer ID in cruise rate plan definition .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Stores Last Modified Date in cruise rate plan definition .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: This column is used to map the Company Id. .
+
+
+================================================================================
+Table #29
+================================================================================
+Source File: itrvl_fna.HTML
+Table Name: ITRVL_ACC_PKG_ACCLINE_DTLS_VW
+Module: REPORT
+Description: Table to store package line details for revenue recognition
+
+Columns (29):
+--------------------------------------------------------------------------------
+  - PKG_ID
+    Type: BIGINT
+    Nullable: YES
+    Comment: Unique identifier for each records .
+
+  - TENANT_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: This holds the tenant id .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: This holds the company id .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: This holds the last modified by details .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: This holds the last modified date .
+
+  - ORG_UNIT
+    Type: CHARACTER VARYING(75)
+    Nullable: YES
+    Comment: Holds the organization unit .
+
+  - BILLING_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: This is the Booking ID/Billing ID from Billing Table .
+
+  - CHARGE_TYPE
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Give the charge type details .
+
+  - SERVICE_TYPE
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: SERVICE_TYPE contains the same as Line type of Booking Line (Component) eg AIR, HTL, CRU, ACT, MIS etc. .
+
+  - IS_PARTOF_PKG
+    Type: BOOLEAN
+    Nullable: YES
+    Comment: Indicates the item is part of Package or Not part of Package .
+
+  - PKG_CMPNT_ID
+    Type: CHARACTER VARYING(20)
+    Nullable: YES
+    Comment: Stores the value of package component id .
+
+  - SALE_NET_VALUE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the net value .
+
+  - SALE_GROSS_VALUE
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the gross value .
+
+  - SALE_COMM
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the commision .
+
+  - SALE_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the discount .
+
+  - SALE_SERVICE_TAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the service tax of the sales .
+
+  - COMM_SRV_TAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the commission service tax .
+
+  - COST_AMT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the cost amount .
+
+  - ANT_EX_FLAG
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: This holds the status of the anticipated exclusion .
+
+  - ACT_EX_FLAG
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: This holds the status of the actual exclusion .
+
+  - ADJ_EX_FLAG
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: This holds the status of the adjusted exclusion .
+
+  - POSTED_REV
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted revenue .
+
+  - POSTED_COMM
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted commission .
+
+  - POSTED_DISCOUNT
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted discount .
+
+  - POSTED_SERV_TAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted service tax .
+
+  - POSTED_COMM_SERV_TAX
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted commission service tax .
+
+  - POSTED_COST
+    Type: NUMERIC (19,6)
+    Nullable: YES
+    Comment: This holds the posted cost .
+
+  - PRICE_METHODOLOGY
+    Type: CHARACTER VARYING(1)
+    Nullable: YES
+    Comment: THIS HOLDS THE PRICE METHODOLOGY OF THE PACKAGE .
+
+  - CATEGORY
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: THIS HOLDS THE CATEGORY OF THE PACKAGE .
+
+
+================================================================================
+Table #30
+================================================================================
+Source File: itrvl_mst.HTML
+Table Name: ITRVL_MST_PACKAGE_CODE_VW
+Module: REPORT
+Description: Package code master
+
+Columns (15):
+--------------------------------------------------------------------------------
+  - PACKAGE_ID
+    Type: INTEGER
+    Nullable: YES
+    Comment: Primary Key .
+
+  - PKG_CODE
+    Type: CHARACTER VARYING(5)
+    Nullable: YES
+    Comment: Package code .
+
+  - MARKET_CODE
+    Type: INTEGER
+    Nullable: YES
+    Comment: market code .
+
+  - OFFICE_CODE
+    Type: INTEGER
+    Nullable: YES
+    Comment: office code .
+
+  - PKG_NAME
+    Type: CHARACTER VARYING(10)
+    Nullable: YES
+    Comment: package name .
+
+  - PACKAGE_TYPE
+    Type: INTEGER
+    Nullable: YES
+    Comment: package type .
+
+  - PACKAGE_THEME
+    Type: CHARACTER VARYING(11)
+    Nullable: YES
+    Comment: package theme .
+
+  - BOOK_PACK_START_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: booking start date .
+
+  - BOOK_PACK_END_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: booking end date .
+
+  - PACKAGE_SUBTYPE
+    Type: INTEGER
+    Nullable: YES
+    Comment: package sub type .
+
+  - PKGCODE_INFO
+    Type: CHARACTER VARYING(2000)
+    Nullable: YES
+    Comment: package info .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(100)
+    Nullable: YES
+    Comment: Last Modified User Details .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: Last Modified Date .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: Status of the offer record (Active/Inactive/Deleted) .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: Company Id .
+
+
+================================================================================
+Table #31
+================================================================================
+Source File: itrvl_mst.HTML
+Table Name: ITRVL_MST_PKGCLASSIFICATION_VW
+Module: REPORT
+Description: None
+
+Columns (10):
+--------------------------------------------------------------------------------
+  - MASTER_CODE
+    Type: INTEGER
+    Nullable: YES
+    Comment: master_code .
+
+  - MASTER_KEY
+    Type: CHARACTER VARYING(30)
+    Nullable: YES
+    Comment: unique key to identify each base master .
+
+  - MASTER_VALUE
+    Type: CHARACTER VARYING(4000)
+    Nullable: YES
+    Comment: This column stores the name of the master .
+
+  - DESCRIPTION
+    Type: CHARACTER VARYING(5000)
+    Nullable: YES
+    Comment: This column stores the master description .
+
+  - MASTER_INFORMATION
+    Type: CHARACTER VARYING(4000)
+    Nullable: YES
+    Comment: This column stores the master information .
+
+  - LAST_MODIFIED_DATE
+    Type: TIMESTAMP WITHOUT TIME ZONE
+    Nullable: YES
+    Comment: This column stores the date on which the record was last modified .
+
+  - LAST_MODIFIED_BY
+    Type: CHARACTER VARYING(50)
+    Nullable: YES
+    Comment: This column stores the user id who modified the record last .
+
+  - STATUS
+    Type: SMALLINT
+    Nullable: YES
+    Comment: This column stores the status if the master 1: ACTIVE 0: INACTIVE 2: DELETE .
+
+  - META_DATA
+    Type: TEXT
+    Nullable: YES
+    Comment: This column stores the meta data information of the record in json format .
+
+  - COMPANY_ID
+    Type: CHARACTER VARYING(4)
+    Nullable: YES
+    Comment: This column stores the Company Id .
+
